@@ -4,6 +4,8 @@ import Home from "./components/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SearchPage from "./components/SearchPage";
+import LoginPage from "./components/LoginPage";
+import SignupPage from "./components/SignupPage";
 import Axios from "axios";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -24,6 +26,12 @@ function App() {
       <Router>
         <Header />
         <Switch>
+          <Route exact path="/Login">
+            <LoginPage />
+          </Route>
+          <Route exact path="/Signup">
+            <SignupPage />
+          </Route>
           <Route path="/search">
             <SearchPage />
           </Route>

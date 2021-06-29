@@ -19,7 +19,12 @@ function Header() {
         <SearchIcon />
       </div>
       <div className="header-right">
-        <p>Become a host</p>
+        <Link className="register" to="/Login">
+          Login
+        </Link>
+        <Link className="register" to="/SignUp">
+          Signup
+        </Link>
         <Avatar />
       </div>
     </div>
