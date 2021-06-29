@@ -27,21 +27,21 @@ function Home() {
       <div className="home-section">
         <Card
           src="https://media.nomadicmatt.com/2019/airbnb_breakup3.jpg"
-          title="3 Bedroom Flat in Bournemouth"
+          title="3 Bedroom Flat in Pune"
           description="Superhost with a stunning view of the beachside in Sunny Bournemouth"
-          price="£130/night"
+          price="Rs2000/night"
         />
         <Card
           src="https://thespaces.com/wp-content/uploads/2017/08/Courtesy-of-Airbnb.jpg"
-          title="Penthouse in London"
+          title="Penthouse in Goa"
           description="Enjoy the amazing sights of London with this stunning penthouse"
-          price="£350/night"
+          price="Rs3200/night"
         />
         <Card
           src="https://media.nomadicmatt.com/2018/apartment.jpg"
           title="1 Bedroom apartment"
           description="Superhost with great amenities and a fabolous shopping complex nearby"
-          price="£70/night"
+          price="Rs1500/night"
         />
       </div>
     </div>
