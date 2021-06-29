@@ -1,10 +1,10 @@
 const Booking = require("../models/bookingModel");
 
-exports.get = (req, res, next) => {
+exports.getBooking = (req, res, next) => {
   Booking.find({ hotel: req.body.hotel }).then((rooms) => res.send(room));
 };
 
-exports.post = (req, res, next) => {
+exports.postBooking = (req, res, next) => {
   Booking.create(req.body)
     .then((booking) => {
       res.send(booking);
@@ -12,7 +12,7 @@ exports.post = (req, res, next) => {
     .catch(next);
 };
 
-exports.put = (req, res, next) => {
+exports.putBooking = (req, res, next) => {
   Booking.findByIdAndUpdate({ _id: req.params.id }, req.body).then(() => {
     Booking.findOne({ _id: req.params.id }).then((booking) => {
       res.send(booking);
@@ -20,7 +20,7 @@ exports.put = (req, res, next) => {
   });
 };
 
-exports.delete = (req, res, next) => {
+exports.deleteBooking = (req, res, next) => {
   Booking.findByIdAndRemove({ _id: req.params.id }).then((booking) => {
     res.send(booking);
   });

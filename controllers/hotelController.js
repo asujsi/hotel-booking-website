@@ -1,6 +1,6 @@
 const Hotel = require("../models/hotelModel");
 
-exports.get = (req, res, next) => {
+exports.getHotel = (req, res, next) => {
   // Hotel.find({name: req.query.hotelName})
   // .then( hotels => res.send(hotels));
   Hotel.find({ name: req.body.name })
@@ -14,7 +14,7 @@ exports.get = (req, res, next) => {
     });
 };
 
-exports.post = (req, res, next) => {
+exports.postHotel = (req, res, next) => {
   Hotel.create(req.body)
     .then((hotel) => {
       res.send(hotel);
@@ -22,7 +22,7 @@ exports.post = (req, res, next) => {
     .catch(next);
 };
 
-exports.put = (req, res, next) => {
+exports.putHotel = (req, res, next) => {
   Hotel.findByIdAndUpdate({ _id: req.params.id }, req.body).then(() => {
     Hotel.findOne({ _id: req.params.id }).then((hotel) => {
       res.send(hotel);
@@ -30,7 +30,7 @@ exports.put = (req, res, next) => {
   });
 };
 
-exports.delete = (req, res, next) => {
+exports.deleteHotel = (req, res, next) => {
   Hotel.findByIdAndRemove({ _id: req.params.id }).then((hotel) => {
     res.send(hotel);
   });
